@@ -3,7 +3,6 @@
     <top-header></top-header>
     <div class="container">
       <home></home>
-      <a href="#">Click Me</a>
     </div>
   </div>
 </template>
@@ -40,10 +39,10 @@ export default {
     line-height: 1.5;
   }
   a {
-    color: rgba(#387bc9, 0.9);
+    color: rgba($blue, 0.9);
     transition: color 100ms ease-in;
     &:hover {
-      color: #387bc9;
+      color: $blue;
     }
   }
   .container{

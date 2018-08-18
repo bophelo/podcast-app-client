@@ -14,17 +14,16 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~@/assets/sass/_variables';
   .player{
       width: 100%;
       &__audio{
           width: 100%;
       }
       &__header{
-          font-weight: 500px;
+          font-weight: 500;
           margin-bottom: 20px;
           span{
-              font-weight: 800px;
+              font-weight: 800;
           }
       }
   }
