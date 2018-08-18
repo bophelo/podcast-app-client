@@ -7,11 +7,11 @@
 </template>
 
 <script>
-    import PodcastSimple from './podcasts/Simple'
-    export default {
-        name: 'home',
-        components: {
-            PodcastSimple
-        }
-    }
+import PodcastSimple from './podcasts/Simple'
+export default {
+  name: 'home',
+  components: {
+    PodcastSimple
+  }
+}
 </script>

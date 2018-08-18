@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    export default {
-        name: 'podcast-simple'
-    }
+export default {
+  name: 'podcast-simple'
+}
 </script>

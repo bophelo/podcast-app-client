@@ -1,5 +1,7 @@
 # podcast-app-client
 
+A podcast app built with Vue.Js, Vuex and backed up by a slimPHP API + PostgreSQL Database.
+
 ## Project setup
 ```
 npm install
@@ -19,4 +21,3 @@ npm run build
 ```
 npm run lint
 ```
-# podcast-app-client
