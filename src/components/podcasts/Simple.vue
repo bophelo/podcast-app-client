@@ -8,7 +8,7 @@
                 2 days ago
             </div>
             <h1 class="podcast__header">
-                Lorem ipsum dolor sit.
+                <a href="#">Lorem ipsum dolor sit.</a>
             </h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta voluptates nihil molestias nemo doloremque labore ea veniam deserunt asperiores itaque consequuntur rem, nobis facilis id maiores, quod excepturi harum.</p>
         </div>
@@ -32,8 +32,15 @@ export default {
         margin-bottom: 40px;
         overflow: hidden;
 
-        &__details{
+        &__sub{
             font-weight: 500;
+        }
+
+        &__header{
+            font-size: 1.6em;
+            a {
+                text-decoration: none;
+            }
         }
 
         &__details{
