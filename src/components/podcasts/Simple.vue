@@ -5,19 +5,22 @@
         </a>
         <div class="podcast__details">
             <div class="podcast__sub">
-                2 days ago
+                <time :datetime="podcast.created_at">{{podcast.created_at_human}}</time>
             </div>
             <h1 class="podcast__header">
-                <a href="#">Lorem ipsum dolor sit.</a>
+                <a href="#">{{podcast.title}}</a>
             </h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur soluta voluptates nihil molestias nemo doloremque labore ea veniam deserunt asperiores itaque consequuntur rem, nobis facilis id maiores, quod excepturi harum.</p>
+            <p>{{podcast.description | truncate(300) }}</p>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-  name: 'podcast-simple'
+  name: 'podcast-simple',
+  props: [
+      'podcast'
+  ]
 }
 </script>
 
@@ -83,4 +86,3 @@ export default {
         }
     }
 </style>
-
