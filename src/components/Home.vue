@@ -3,7 +3,7 @@
       <transition-group name="fade">
         <podcast-simple :key="podcast.id" v-for="podcast in podcasts" :podcast="podcast"></podcast-simple>
       </transition-group>
-      <a href="#" class="load-more" @click.prevent="show">Load Older Podcasts</a>
+      <a href="#" class="load-more" v-if="page.hasMore()" @click.prevent="getMorePodcasts">Load Older Podcasts</a>
     </div>
 </template>
 
@@ -17,12 +17,14 @@ export default {
   },
   computed: {
     ...mapGetters({
-      podcasts: 'podcasts/getPodcasts'
+      podcasts: 'podcasts/getPodcasts',
+      page: 'podcasts/getPage'
     })
   },
   methods: {
     ...mapActions({
-      getPodcasts: 'podcasts/getPodcasts'
+      getPodcasts: 'podcasts/getPodcasts',
+      getMorePodcasts: 'podcasts/getMorePodcasts'
     })
   },
   mounted () {
