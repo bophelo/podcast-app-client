@@ -16,9 +16,9 @@ export default {
     Player
   },
   computed: {
-      ...mapGetters({
-          playing: 'player/getPlaying'
-      })
+    ...mapGetters({
+      playing: 'player/getPlaying'
+    })
   }
 }
 </script>

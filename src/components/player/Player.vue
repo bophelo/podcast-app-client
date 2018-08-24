@@ -12,26 +12,26 @@
 </template>
 
 <script>
-import { mapActions } from "vuex"
+import { mapActions } from 'vuex'
 export default {
   props: [
-      'podcast'
+    'podcast'
   ],
   watch: {
-      podcast() {
-          //setTimeout(())=>{} for safari bug of playing the same podcast
-          this.$refs.player.load()
-      }
+    podcast () {
+      // setTimeout(())=>{} for safari bug of playing the same podcast
+      this.$refs.player.load()
+    }
   },
   methods: {
-      ...mapActions({
-          setPlaying: 'player/setPlaying'
-      })
+    ...mapActions({
+      setPlaying: 'player/setPlaying'
+    })
   },
   mounted () {
-      this.$refs.player.addEventListener('ended', () => {
-          this.setPlaying(null)
-      })
+    this.$refs.player.addEventListener('ended', () => {
+      this.setPlaying(null)
+    })
   }
 }
 </script>

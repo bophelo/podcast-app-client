@@ -20,23 +20,23 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'podcast-simple',
   props: [
-      'podcast'
+    'podcast'
   ],
   computed: {
-          ...mapGetters({
-              playing: 'player/getPlaying'
-          })
-    },
+    ...mapGetters({
+      playing: 'player/getPlaying'
+    })
+  },
   methods: {
-      ...mapActions({
-          getPodcast: 'podcasts/getPodcast',
-          setPlaying: 'player/setPlaying'
-      }),
-      switchPodcast (id) {
-          this.getPodcast(id).then((podcast) => {
-              this.setPlaying(podcast)
-          })
-      }
+    ...mapActions({
+      getPodcast: 'podcasts/getPodcast',
+      setPlaying: 'player/setPlaying'
+    }),
+    switchPodcast (id) {
+      this.getPodcast(id).then((podcast) => {
+        this.setPlaying(podcast)
+      })
+    }
   }
 }
 </script>
