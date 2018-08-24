@@ -1,18 +1,24 @@
 <template>
     <header class="top-header">
       <div class="container">
-        <p class="welcome">Oh, hi. <strong>Please choose something to play.</strong></p>
-        <player></player>
+        <player v-if="playing" :podcast="playing"></player>
+        <p v-else class="welcome">Oh, hi. <strong>Please choose something to play.</strong></p>
       </div>
     </header>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Player from './player/Player'
 export default {
   name: 'top-header',
   components: {
     Player
+  },
+  computed: {
+      ...mapGetters({
+          playing: 'player/getPlaying'
+      })
   }
 }
 </script>
@@ -20,7 +26,7 @@ export default {
 <style lang="scss">
   @import '~@/assets/sass/_variables';
   .welcome{
-    font-size: 1.1em;
+    font-size: 1em;
     text-align: center;
   }
   .top-header{
