@@ -1,6 +1,8 @@
 # podcast-app-client
 
-A podcast app built with Vue.Js, Vuex and backed up by a [slimPHP API + PostgreSQL Database](https://github.com/bophelo/podcast-app).[Demo:](https://bophelo-podcast-app-client.herokuapp.com/)
+A podcast app built with Vue.Js, Vuex and backed up by a [slimPHP API + PostgreSQL Database](https://github.com/bophelo/podcast-app).
+
+[Demo:](https://bophelo-podcast-app-client.herokuapp.com/)
 
 ## Project setup
 ```
